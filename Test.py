@@ -79,12 +79,12 @@ final_transform = transforms.Compose([
 
 #Test Part 
 # Load test data directly
-test_dataset = MyDataset(data_file='TestLDM.csv', transform=final_transform)
-test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+test_dataset = MyDataset(data_file='DataPath.csv', transform=final_transform)
+test_dataloader = DataLoader(test_dataset, batch_size=512, shuffle=False)
 
 student_model = StudentResNet().to(device)
 
-student_model.load_state_dict(torch.load('student_modelMix.pth', map_location=torch.device('cpu')))
+student_model.load_state_dict(torch.load('Trained_Model_Path', map_location=torch.device('cpu')))
 
 # Set the model to evaluation mode
 
