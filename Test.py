@@ -42,7 +42,7 @@ class StudentResNet(nn.Module):
         # Feature extraction for distillation
         features = F.relu(self.fc2_features(x))
         features = self.fc3_features(features)
-        features = features.view(x.size(0),229, 768)  # Reshape to [batch_size, 32, 768]
+        features = features.view(x.size(0),229, 768)  
 
         # Final output for the actual task
         output = self.final_layer(x)  # Assuming a single value output (e.g., for binary classification)
@@ -74,7 +74,6 @@ class MyDataset(Dataset):
 final_transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor()
-    # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 #Test Part 
