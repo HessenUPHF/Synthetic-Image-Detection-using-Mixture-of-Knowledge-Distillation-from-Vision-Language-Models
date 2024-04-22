@@ -113,7 +113,7 @@ final_transform = transforms.Compose([
 
 
 # Create a dataset instancecon with final_transform
-dataset = MyDataset(data_file='TestMIX.csv', transform=final_transform)
+dataset = MyDataset(data_file='Train_Data.csv', transform=final_transform)
 
 # Create the final DataLoader
 dataloader = DataLoader(dataset, batch_size=512, shuffle=True, pin_memory=True)
@@ -199,9 +199,6 @@ for epoch in range(num_epochs):
           # Convert logits to predictions for accuracy calculation
         preds = torch.sigmoid(student_logits).round()
 
-        
-        # batch_acc = preds.eq(batch_labels.view_as(preds)).sum().item() / len(batch_labels)
-
         print(f'Epoch {epoch+1}, Batch Loss: {final_loss.item()}')
      
  
@@ -231,4 +228,4 @@ for epoch in range(num_epochs):
     print(f'Epoch {epoch+1}: | Loss: {epoch_loss:.5f} |  Dis Loss: {dis_loss:.5f} |  Cls Loss: {cls_loss:.5f} | Acc: {np.mean(epoch_acc)*100:.2f} | F1_score: {np.mean(scores)*100:.2f}%')
     print(f'Epoch {epoch+1}: | Avg Loss: {epoch_loss:.5f} | Avg Acc: {np.mean(epoch_acc)*100:.2f}%')
 # Save the model after training
-torch.save(student_model.state_dict(), 'student_modelMIX.pth')
+torch.save(student_model.state_dict(), 'YourTrainModel.pth')
