@@ -8,7 +8,7 @@ new standard in the field of synthetic image detection.<br>
 
 All experiments are carried out on VS Code on Windows 10  and the detailed results are given in the paper.<br>
 # Dataset Description : 
-1- Real Part : From publicly (LSUN) Bedroom dataset .
+1- Real Part : From publicly (LSUN) Bedroom dataset .<br>
 2- Fake Part : we used Three different diffusion models that were trained on the LSUN-Bedroom dataset produced a set of images that we collected ( ADM, IDDPM, and LDM ) and We added two more models to the collection of text-to-image generating models we collectedto  are used in our experiments: GLIDE and Stable Diffusion  
 * label_Dataset: to label our datset, refer to file 'labelData.py' 
 
