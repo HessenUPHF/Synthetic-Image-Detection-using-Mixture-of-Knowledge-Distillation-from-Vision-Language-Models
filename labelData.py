@@ -3,15 +3,15 @@ from PIL import Image
 import pandas as pd
 
 
-realSample = os.listdir('test/glide/0_real/')
-synthetic = os.listdir('test/glide/1_fake/')
+realSample = os.listdir('test/Test_Data/0_real/')
+synthetic = os.listdir('test/Test_Data/1_fake/')
 
 
 for i in range(len(realSample)):
-    realSample[i] = 'test/glide/0_real/' +realSample[i]
+    realSample[i] = 'test/Test_Data/0_real/' +realSample[i]
 
 for i in range(len(synthetic)):
-    synthetic[i] = 'test/glide/1_fake/'+synthetic[i]
+    synthetic[i] = 'test/Test_Data/1_fake/'+synthetic[i]
 
 real = pd.DataFrame({
     'image': realSample,
@@ -27,5 +27,5 @@ fake = pd.DataFrame({
 
 data = pd.concat([real, fake]).sample(frac=1).reset_index(drop=True)
 
-data.to_csv('glide_test.csv', index=False)
+data.to_csv('Labled_Data.csv', index=False)
 print(data)
