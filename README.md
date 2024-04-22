@@ -3,7 +3,7 @@ In this Work, we propose novel method that integrates the rich representational 
 foundation for a new generation of intelligent visual analysis systems by coordinating special cooperation between these complex models, thereby creating a
 new standard in the field of synthetic image detection.<br>
 
-![Images\FIGURE3.png](Images\FIGURE3.png)
+![Images/FIGURE3.PNG](Images/FIGURE3.PNG)
 
 
 <!-- 
