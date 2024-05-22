@@ -16,11 +16,11 @@ All experiments are carried out on VS Code on Windows 10  and the detailed resul
 
 # Proposed Model : 
 * Teachers Model: We Used  Pre-trained models (BLIP2, VitGPT2) that are already trained on the same dataset mentioned above.
-* Student Model:  We Used a Pre-trained model (ResNet18), Trained on Imagenet Dataset.  
+* Student Model:  We Used a Pre-trained model (ResNet18), Trained on the Imagenet Dataset.  
 
 # Expirments :
-We Conducted Two Expirments 
-*Exp 1: In our first experiment, we used only the Latent Diffusion Models (LDM) dataset to train the lightweight ResNet18 model .
+We Conducted Two Experiments 
+*Exp 1: In our first experiment, we used only the Latent Diffusion Models (LDM) dataset to train the lightweight ResNet18 model.
 *EXp 2: Training in Combined ADM and LDM Building on the insights from the first study, we extended our training by including not only ADM but also the Latent Diffusion Model (LDM) dataset.
 # Usage
 * Training:<br>
@@ -52,5 +52,15 @@ We Conducted Two Expirments
 Figure 3 demonstrates our model's strong ability to distinguish between synthetic and real images across various test sets. It achieved high true positive rates, accurately identifying almost all synthetic images in the LDM, ADM, and IDDPM subsets, with counts of 9,955, 9,843, and 9,980 respectively, and performed well in recognizing 9,992 and 9,736 out of 10,000 images in the Stable Diffusion and Glide subsets. Despite its precision, there's room for improvement in reducing false negatives, which vary across subgroups. Our results underscore the critical role of model architecture and the complexities of synthetic image generation techniques. The incorporation of advanced models like BLIP2 and VitGPT2, which integrate visual and language data, enhances detection precision across diverse scenarios, promoting the development of intelligent systems that can adapt to new generative techniques. This underscores the need for versatile training strategies to enhance the precision and reliability of synthetic image detection in a complex digital environment.
 
 ![Images/CM.PNG](Images/CM.PNG)
+
+
+
+# Conclusion :
+
+
+
+As our research into synthetic image detection concludes, we reflect on the key insights gained from applying knowledge distillation from Vision-Language Models (VLMs) like BLIP2 and ViTGPT2 to the ResNet18 architecture. Our study addressed the challenging task of distinguishing between real and synthetic images, a critical endeavor given the rapid evolution of generative models. By leveraging a broad range of representational knowledge from these models, we significantly enhanced ResNet18’s accuracy and adaptability to various generative techniques.
+
+The integration of the sophisticated learning capabilities of VLMs with the efficiency of ResNet18 greatly improved image authentication, achieving an impressive 99.48% average accuracy across various datasets. This approach not only sets a new standard for synthetic image detection but also optimizes analytical requirements, crucial for real-world applications. Our findings emphasize the value of integrative AI techniques, which merge elements of natural language processing, computer vision, and machine learning to tackle significant challenges in digital media authentication. This study paves the way for future advancements in image authenticity, offering a flexible method to address the escalating challenges posed by advancements in artificial image generation.
 
 
