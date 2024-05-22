@@ -30,8 +30,12 @@ We Conducted Two Expirments
   
 # Results : 
 * Evaluation of LDM Trained Models :
+
+
   The evaluation of the ResNet18 model, enhanced with Vision-Language Models (VLMs) like ViTGPT2 and BLIP2, focused on its ability to detect synthetic images created by various generative models. This study deepened our understanding of the model's strengths and highlighted the benefits of integrating multiple knowledge sources for more effective image authentication.
   The experiment revealed notable variations in performance among different models. The Xception model was particularly effective at detecting text-to-image synthesis in the LDM subset but showed weaknesses in the ADM subset, indicating a challenge in generalizing to various types of synthetic images. Similarly, ResNet excelled in the LDM tests but faltered in the ADM tests, underscoring its difficulty with adversarial synthetic images' unique traits. BLIP2 generally performed well across most subsets but also struggled in the ADM subset, suggesting that even robust models could improve with more varied training approaches.
+
+  ![Images/table1.PNG](Images/table1.PNG)
 
 
 
